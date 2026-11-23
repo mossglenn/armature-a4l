@@ -1,0 +1,33 @@
+{
+  "name": "@armature/a4l",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A bridge between an Armature learning design and A4L, the Architecture for AI-Augmented Learning: a manifest of the design at a commit for A4L's analyses, and A4L's aggregate results back as metrics and findings",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@armature/client": "github:mossglenn/armature#b41f89e2065463e3563fa2eab65d46580900f882&path:packages/client",
+    "@armature/types": "github:mossglenn/armature#b41f89e2065463e3563fa2eab65d46580900f882&path:packages/types"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.1",
+    "typescript": "5.9.3",
+    "vitest": "4.0.8"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
